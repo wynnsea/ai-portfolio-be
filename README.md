@@ -56,3 +56,20 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## phpMyAdmin (local database browser)
+
+Configure the MySQL connection in `.env`, then start the services from the backend repository:
+
+```sh
+docker compose up -d
+```
+
+Open [http://localhost:8081](http://localhost:8081) and sign in with:
+
+- Server: `db`
+- Username and password: `DB_USERNAME` and `DB_PASSWORD` from `.env`
+- Database: `DB_DATABASE` from `.env`
+
+The web UI is bound to `127.0.0.1` by default and is intended for local development only.
+Stop it when finished with `docker compose stop phpmyadmin`.
